@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { ShieldCheck, Mail, Phone, MapPin } from 'lucide-react'
-import { BRAND_NAME, NOTIFICATION_EMAIL } from '@/lib/constants'
+import { Mail, Phone, MapPin } from 'lucide-react'
+import { BRAND_NAME, CONTACT_EMAIL } from '@/lib/constants'
 
 const footerLinks = {
   Product: [
@@ -30,9 +30,11 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent-500 text-white">
-                <ShieldCheck size={22} strokeWidth={2.5} />
-              </div>
+              <img
+                src="/logo.jpg"
+                alt={BRAND_NAME}
+                className="h-10 w-auto rounded-xl object-contain"
+              />
               <span className="text-lg font-bold text-white">{BRAND_NAME}</span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
@@ -45,7 +47,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3 text-slate-400">
                 <Mail size={16} className="text-accent-400" />
-                <span>{NOTIFICATION_EMAIL}</span>
+                <span>{CONTACT_EMAIL}</span>
               </div>
               <div className="flex items-start gap-3 text-slate-400">
                 <MapPin size={16} className="mt-0.5 text-accent-400" />

@@ -5,6 +5,7 @@
 export const BRAND_NAME = 'Advance America Loans' as const
 export const CLIENT_NAME = 'AdvanceAmericaLoans' as const
 export const NOTIFICATION_EMAIL = 'finnfoxpersonalloan@gmail.com' as const
+export const CONTACT_EMAIL = 'info@advanceamericaloan.com' as const
 export const SHEET_TAB_NAME = `${CLIENT_NAME} Applications` as const
 export const SCRIPT_PROJECT_NAME = `${CLIENT_NAME} - Form Handler` as const
 

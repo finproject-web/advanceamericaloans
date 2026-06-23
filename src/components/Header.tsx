@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { ShieldCheck, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { BRAND_NAME } from '@/lib/constants'
 
@@ -20,9 +20,11 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-navy-800 to-accent-600 text-white shadow-soft">
-            <ShieldCheck size={22} strokeWidth={2.5} />
-          </div>
+          <img
+            src="/logo.jpg"
+            alt={BRAND_NAME}
+            className="h-10 w-auto rounded-xl object-contain shadow-soft"
+          />
           <div className="flex flex-col">
             <span className="text-lg font-bold leading-tight tracking-tight text-navy-950">
               {BRAND_NAME}
