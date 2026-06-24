@@ -2,19 +2,19 @@
 // CLIENT CONFIGURATION — Replace placeholders with actual values
 // ============================================================
 
-export const BRAND_NAME = 'Advance America Loans' as const
-export const CLIENT_NAME = 'AdvanceAmericaLoans' as const
+export const BRAND_NAME = 'Avant Finance' as const
+export const CLIENT_NAME = 'AvantFinance' as const
 export const NOTIFICATION_EMAIL = 'finnfoxpersonalloan@gmail.com' as const
-export const CONTACT_EMAIL = 'info@advanceamericaloan.com' as const
+export const CONTACT_EMAIL = 'info@avantfinance.com' as const
 export const SHEET_TAB_NAME = `${CLIENT_NAME} Applications` as const
 export const SCRIPT_PROJECT_NAME = `${CLIENT_NAME} - Form Handler` as const
 
 // Replace with your deployed Google Apps Script Web App URL after setup
 export const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbysnBpyNp_81oPLNtDDrolOO-DvVf4PyF6FmQi2mQrmilVyVS_j1yuKQ09cjZOOSPty/exec' as const
+  'https://script.google.com/macros/s/AKfycbwMnG_DmX3Y8d5HG5Cxas_fzEf8JXGDzgPAW1l2DLNwPXRxktTH3oPKkql7N_d06uQP/exec' as const
 
 // Replace with your GitHub repository name when ready to deploy
-export const GITHUB_REPO = 'https://github.com/finproject-web/advanceamericaloans' as const
+export const GITHUB_REPO = 'https://github.com/finproject-web/avantfinance' as const
 
 export const LOAN_PURPOSES = [
   'Debt Consolidation',

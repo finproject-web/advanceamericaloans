@@ -31,11 +31,10 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3">
               <img
-                src="/logo.jpg"
+                src="/logo.svg"
                 alt={BRAND_NAME}
-                className="h-10 w-auto rounded-xl object-contain"
+                className="h-10 w-auto"
               />
-              <span className="text-lg font-bold text-white">{BRAND_NAME}</span>
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
               Fast, secure, and transparent personal loans. We are committed to helping you achieve your financial goals with confidence.

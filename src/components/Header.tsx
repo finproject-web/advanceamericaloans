@@ -21,18 +21,10 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <img
-            src="/logo.jpg"
+            src="/logo.svg"
             alt={BRAND_NAME}
-            className="h-10 w-auto rounded-xl object-contain shadow-soft"
+            className="h-10 w-auto"
           />
-          <div className="flex flex-col">
-            <span className="text-lg font-bold leading-tight tracking-tight text-navy-950">
-              {BRAND_NAME}
-            </span>
-            <span className="text-[10px] font-semibold uppercase tracking-widest text-slate-500">
-              Trusted Lending
-            </span>
-          </div>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

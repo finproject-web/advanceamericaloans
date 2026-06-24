@@ -1,4 +1,4 @@
-# Advance America Loans — Personal Loan Website
+# Avant Finance — Personal Loan Website
 
 A modern, professional personal loan application website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
 

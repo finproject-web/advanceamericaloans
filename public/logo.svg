@@ -1,0 +1,33 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo Icon - Abstract A with growth arrow -->
+  <g>
+    <!-- Main A shape -->
+    <path d="M25 8 L40 38 L35 38 L32 31 L18 31 L15 38 L10 38 L25 8Z" fill="#1e3a5f"/>
+    <path d="M25 8 L40 38 L35 38 L32 31 L18 31 L15 38 L10 38 L25 8Z" fill="url(#gradient1)"/>
+    
+    <!-- Inner triangle -->
+    <path d="M25 14 L30 26 L20 26 L25 14Z" fill="#0ea5e9"/>
+    
+    <!-- Growth arrow accent -->
+    <path d="M38 12 L44 6 L44 14 L38 12Z" fill="#0ea5e9"/>
+    <path d="M38 12 L44 12" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient1" x1="10" y1="8" x2="40" y2="38" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1e3a5f"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Text: Avant -->
+  <text x="55" y="32" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1e3a5f">
+    Avant
+  </text>
+  
+  <!-- Text: Finance -->
+  <text x="115" y="32" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#0ea5e9">
+    Finance
+  </text>
+</svg>

