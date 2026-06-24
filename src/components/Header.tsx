@@ -9,7 +9,10 @@ import { BRAND_NAME } from '@/lib/constants'
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/apply-now', label: 'Apply Now' },
+  { href: '#services', label: 'Loans' },
+  { href: '#how-it-works', label: 'How It Works' },
+  { href: '#testimonials', label: 'Reviews' },
+  { href: '#faq', label: 'Contact' },
 ]
 
 export function Header() {
@@ -48,11 +51,8 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-4 md:flex">
-          <Link href="tel:+14642623906" className="text-sm font-medium text-slate-600 hover:text-navy-900">
-            (464) 262-3906
-          </Link>
           <Link href="/apply-now" className="btn-primary">
-            Apply Now
+            Check My Rate
           </Link>
         </div>
 
@@ -85,7 +85,7 @@ export function Header() {
               </Link>
             ))}
             <Link href="/apply-now" className="btn-primary mt-2">
-              Apply Now
+              Check My Rate
             </Link>
           </nav>
         </motion.div>

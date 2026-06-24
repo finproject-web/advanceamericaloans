@@ -6,11 +6,45 @@ import { ArrowRight, CheckCircle2, Percent, Clock, ShieldCheck } from 'lucide-re
 import { TrustBadge } from '@/components/TrustBadge'
 import { BRAND_NAME } from '@/lib/constants'
 
+const services = [
+  { title: 'Payday Loans', desc: 'Quick cash for unexpected expenses. Get funded within 24 hours with minimal paperwork.' },
+  { title: 'Personal Loans', desc: 'Flexible loans for debt consolidation, medical bills, or any purpose you need.' },
+  { title: 'Housing Finance', desc: 'Home purchase, renovation, or refinancing with competitive rates and terms.' },
+  { title: 'Auto Loans', desc: 'Finance your new or used vehicle with flexible terms and fast approval.' },
+  { title: 'Business Loans', desc: 'Working capital and expansion financing to grow your business.' },
+  { title: 'Education Loans', desc: 'Invest in your future with affordable education financing options.' },
+]
+
 const features = [
-  { icon: CheckCircle2, title: 'No Hidden Fees', desc: 'Transparent rates and terms, no surprises.' },
-  { icon: Percent, title: 'Competitive Rates', desc: 'Personalized APRs based on your credit profile.' },
-  { icon: Clock, title: 'Fast Funding', desc: 'Funds can be deposited as soon as the next business day.' },
-  { icon: ShieldCheck, title: 'Safe & Secure', desc: 'Your data is protected with bank-level encryption.' },
+  { icon: CheckCircle2, title: 'No Hidden Fees', desc: 'Transparent pricing, no penalties' },
+  { icon: Percent, title: 'Competitive Rates', desc: 'Starting from 4% APR' },
+  { icon: Clock, title: 'Fast Approval', desc: 'Decision within 24 hours' },
+  { icon: ShieldCheck, title: 'Dedicated Support', desc: 'Personal loan advisor assigned' },
+]
+
+const stats = [
+  { value: '$50M+', label: 'Loans Funded' },
+  { value: '15K+', label: 'Happy Clients' },
+  { value: '50', label: 'States Served' },
+  { value: '4.9', label: 'Client Rating' },
+]
+
+const testimonials = [
+  {
+    name: 'Michael J.',
+    loan: 'Personal Loan — $15,000',
+    text: 'The process was incredibly smooth. I got approved within hours and the funds were in my account the next day. Highly recommend!'
+  },
+  {
+    name: 'Sarah R.',
+    loan: 'Home Improvement — $25,000',
+    text: 'Best rates I found anywhere. The team was helpful and transparent throughout the entire process. No hidden surprises.'
+  },
+  {
+    name: 'David W.',
+    loan: 'Emergency Loan — $2,500',
+    text: 'When I needed emergency funds, Avant Finance came through. Quick, easy, and professional. I felt supported every step of the way.'
+  },
 ]
 
 export default function HomePage() {
@@ -37,11 +71,11 @@ export default function HomePage() {
                 Now accepting applications
               </div>
               <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white lg:text-6xl">
-                Personal loans that<br />
-                <span className="text-accent-400">move you forward.</span>
+                Smart loans for a<br />
+                <span className="text-accent-400">brighter future</span>
               </h1>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-slate-300">
-                Apply in minutes, get a decision fast, and borrow up to $50,000 with clear, upfront terms.
+                Personal loans from $500 to $50,000 with rates as low as 4% APR. Fast approval, no hidden fees, funds in 1-3 days.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link href="/apply-now" className="btn-primary px-8 py-4 text-base">
@@ -66,19 +100,20 @@ export default function HomePage() {
               <div className="rounded-3xl bg-white/5 p-8 ring-1 ring-white/10 backdrop-blur-md">
                 <div className="space-y-6">
                   <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                    <span className="text-sm text-slate-300">Loan Amount</span>
-                    <span className="text-2xl font-bold text-white">$15,000</span>
+                    <span className="text-sm text-slate-300">4% APR</span>
+                    <span className="text-2xl font-bold text-white">As low as</span>
                   </div>
                   <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                    <span className="text-sm text-slate-300">Estimated APR</span>
-                    <span className="text-2xl font-bold text-accent-400">9.99%</span>
+                    <span className="text-sm text-slate-300">24hrs</span>
+                    <span className="text-2xl font-bold text-accent-400">Fast approval</span>
+                  </div>
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                    <span className="text-sm text-slate-300">$0</span>
+                    <span className="text-2xl font-bold text-white">Hidden fees</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-300">Monthly Payment</span>
-                    <span className="text-2xl font-bold text-white">$320</span>
-                  </div>
-                  <div className="rounded-2xl bg-accent-500/10 p-4 text-center text-sm text-accent-200">
-                    This is an example. Your actual rate may differ.
+                    <span className="text-sm text-slate-300">Credit Score</span>
+                    <span className="text-2xl font-bold text-white">No Impact</span>
                   </div>
                 </div>
               </div>
@@ -87,22 +122,54 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="how-it-works" className="bg-white px-4 py-20 lg:px-8">
+      <section id="services" className="bg-white px-4 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-navy-900 lg:text-4xl">
-              How it works
+              Financing solutions tailored to your needs
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-              A simple, three-step process designed to get you funded quickly and securely.
+              Whether it's an emergency or a long-term goal, we have the right loan for you.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, idx) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                className="card"
+              >
+                <h3 className="text-lg font-semibold text-navy-900">{service.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{service.desc}</p>
+                <Link href="/apply-now" className="mt-4 inline-flex items-center text-sm font-medium text-accent-600 hover:text-accent-700">
+                  Apply Now <ArrowRight size={16} className="ml-1" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" className="bg-slate-50 px-4 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-navy-900 lg:text-4xl">
+              Get funded in 3 simple steps
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+              Our streamlined process gets you from application to funded in as little as 24 hours.
             </p>
           </div>
 
           <div className="mt-14 grid gap-8 md:grid-cols-3">
             {[
-              { step: '01', title: 'Apply Online', desc: 'Fill out our secure 3-step application in just a few minutes.' },
-              { step: '02', title: 'Get Reviewed', desc: 'We review your information and verify your details quickly.' },
-              { step: '03', title: 'Receive Funds', desc: 'If approved, funds can be deposited directly to your account.' },
+              { step: '01', title: 'Apply Online', desc: 'Complete our simple application in under 5 minutes. No paperwork, no hassle.' },
+              { step: '02', title: 'Get Reviewed', desc: 'Our team reviews your application and contacts you with a decision within 24 hours.' },
+              { step: '03', title: 'Receive Funds', desc: 'Once approved, funds are deposited directly into your bank account in 1-3 days.' },
             ].map((item, idx) => (
               <motion.div
                 key={item.step}
@@ -119,6 +186,25 @@ export default function HomePage() {
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-navy-900 lg:text-4xl">
+              Ready to take control of your finances?
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+              Apply in minutes and get a decision within 24 hours. No hidden fees, no surprises — just straightforward lending.
+            </p>
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/apply-now" className="btn-primary inline-flex px-10 py-4 text-base">
+              Apply Now
+              <ArrowRight size={18} className="ml-2" />
+            </Link>
           </div>
         </div>
       </section>
@@ -147,6 +233,90 @@ export default function HomePage() {
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{feature.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" className="bg-navy-900 px-4 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white lg:text-4xl">
+              Trusted by thousands across America
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-300">
+              Real stories from real people who achieved their financial goals with {BRAND_NAME}.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-8 md:grid-cols-3">
+            {testimonials.map((testimonial, idx) => (
+              <motion.div
+                key={testimonial.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 backdrop-blur-md"
+              >
+                <p className="text-sm leading-relaxed text-slate-300">"{testimonial.text}"</p>
+                <div className="mt-4 border-t border-white/10 pt-4">
+                  <p className="text-sm font-semibold text-white">{testimonial.name}</p>
+                  <p className="text-xs text-slate-400">{testimonial.loan}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat, idx) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                className="text-center"
+              >
+                <p className="text-4xl font-bold text-accent-400 lg:text-5xl">{stat.value}</p>
+                <p className="mt-2 text-sm text-slate-300">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className="bg-white px-4 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-navy-900 lg:text-4xl">
+              Common questions answered
+            </h2>
+          </div>
+          <div className="mx-auto mt-12 max-w-3xl space-y-6">
+            <div className="card">
+              <h3 className="text-base font-semibold text-navy-900">What credit score do I need?</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                We work with customers across the credit spectrum. While higher scores may qualify for better rates, we consider many factors beyond just your credit score. Our minimum requirement is typically a score of 580 or higher.
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="text-base font-semibold text-navy-900">How long does the application take?</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                Our online application takes just 5-10 minutes to complete. You'll receive a decision within minutes in most cases. Once approved, funds are typically deposited to your account within 1-3 business days.
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="text-base font-semibold text-navy-900">Will checking my rate affect my credit score?</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                No, checking your rate with us uses a soft inquiry that does not impact your credit score. We only perform a hard credit check if you decide to proceed with a loan offer.
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="text-base font-semibold text-navy-900">What are your interest rates?</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                Our rates range from 4% to 35% APR depending on your creditworthiness, loan amount, and term length. We offer competitive rates and transparent pricing with no hidden fees.
+              </p>
+            </div>
           </div>
         </div>
       </section>

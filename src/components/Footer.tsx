@@ -3,23 +3,24 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 import { BRAND_NAME, CONTACT_EMAIL } from '@/lib/constants'
 
 const footerLinks = {
-  Product: [
+  Loans: [
     { label: 'Personal Loans', href: '/apply-now' },
-    { label: 'How It Works', href: '#' },
-    { label: 'Rates & Fees', href: '#' },
-    { label: 'FAQ', href: '#' },
+    { label: 'Payday Loans', href: '/apply-now' },
+    { label: 'Housing Finance', href: '/apply-now' },
+    { label: 'Auto Loans', href: '/apply-now' },
+    { label: 'Business Loans', href: '/apply-now' },
   ],
   Company: [
     { label: 'About Us', href: '#' },
-    { label: 'Careers', href: '#' },
-    { label: 'Press', href: '#' },
-    { label: 'Contact', href: '#' },
+    { label: 'How It Works', href: '#how-it-works' },
+    { label: 'Testimonials', href: '#testimonials' },
+    { label: 'FAQ', href: '#faq' },
+    { label: 'Contact', href: '#faq' },
   ],
   Legal: [
     { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Use', href: '#' },
-    { label: 'Licenses', href: '#' },
-    { label: 'Disclosures', href: '#' },
+    { label: 'Terms of Service', href: '#' },
+    { label: 'SMS Policy', href: '#' },
   ],
 }
 
@@ -37,7 +38,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
-              Fast, secure, and transparent personal loans. We are committed to helping you achieve your financial goals with confidence.
+              Comprehensive loan solutions from $500 to $50,000. Serving all 50 states with competitive rates and fast approvals.
             </p>
             <div className="mt-6 space-y-3 text-sm">
               <div className="flex items-center gap-3 text-slate-400">
@@ -76,8 +77,10 @@ export function Footer() {
 
         <div className="mt-12 border-t border-slate-800 pt-8 text-xs text-slate-500">
           <p>
-            © {new Date().getFullYear()} {BRAND_NAME}. All rights reserved. Loans are subject to credit approval and underwriting criteria.
-            {BRAND_NAME} is not a lender in all states.
+            {BRAND_NAME} LLC is a lending company. All loans are subject to credit approval. Loan amounts, terms, and interest rates vary based on creditworthiness and state regulations. APR ranges from 4% to 35%. Not all applicants will qualify for the lowest rate. This is not a commitment to lend. Equal Housing Lender. NMLS #XXXXXX.
+          </p>
+          <p className="mt-2">
+            © {new Date().getFullYear()} {BRAND_NAME} LLC. All rights reserved.
           </p>
         </div>
       </div>
